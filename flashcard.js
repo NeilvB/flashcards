@@ -39,7 +39,7 @@ cardBackText.addEventListener('focus', () => {
 
 cardFrontText.addEventListener('focus', () => {
   if (
-    lastElementWithFocus === cardBackText &&
+    (lastElementWithFocus === cardBackText || !lastElementWithFocus) &&
     card.classList.contains('flipped')
   ) {
     flipCard();
